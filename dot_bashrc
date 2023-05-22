@@ -1,0 +1,29 @@
+
+#
+# ~/.bashrc
+#
+
+#PyEnv setup
+#export PYENV_ROOT="$HOME/.pyenv"
+#command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
+
+export GTK_THEME=Fluent-round-Light
+export PATH="$HOME/bin:$PATH"
+export PATH=/home/$USER/.local/share/gem/ruby/3.0.0/bin:$PATH
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+#alias ls='ls --color=auto'
+#PS1='[\u@\h \W]\$ '
+
+cd ~
+
+if [ "`id -u`" -eq 0 ]; then
+    PS1="[ \[\e[1;31m\]λ\[\e[1;32m\]\[\e[49m\] \W \[\e[0m\]] "
+else
+    PS1="[ \[\e[1;32m\]λ \W \[\e[0m\]] "
+fi
+source /home/charveey/bash-wakatime/bash-wakatime.sh
+export EDITOR=nano
