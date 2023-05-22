@@ -2,8 +2,8 @@
 
 
 #List of packages needed
-packagesNeeded='curl git sudo nano wget npm ruby'
-packagesArch='chezmoi'
+packagesNeeded='curl git sudo nano wget'
+packagesArch='chezmoi npm ruby'
 
 #Check what package manager is installed, update and install required packages
 if [ -x "$(command -v apk)" ];       then sudo apk add --no-cache $packagesNeeded
