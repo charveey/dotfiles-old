@@ -1,0 +1,27 @@
+AddKeysToAgent yes
+
+# RaspberryPi
+Host 192.168.1.7
+  User pi
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/ssh_login
+# GitHub
+Host github.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/git_key
+
+Host aur.archlinux.org
+  IdentityFile ~/.ssh/staticman_key
+  User aur
+Host creeper
+  HostName 192.168.1.2
+  IdentityFile ~/.ssh/staticman_key
+  User root
+Host dlinknas
+  HostName 192.168.1.198
+  IdentityFile ~/.ssh/staticman_key
+  User root
+Host vex
+  HostName 192.168.1.215
+  IdentityFile ~/.ssh/staticman_key
+  User vex
